@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+{% load static %} 
+
+{% block head_title %}About Me{% endblock %} 
+{% block content %}
+    
+<div class="container mx-auto my-8 p-8 bg-white shadow-lg rounded-md">
+    <h3 class="text-3xl font-semibold mb-4">About Me</h3>
+    <h1 class="text-4xl font-bold mb-4">Assalamualikum,</h1>
+    <h1 class="text-4xl font-bold mb-8">I'm Ayman, the founder of Amar Bank Website.</h1>
+
+    <h3 class="text-2xl font-semibold mb-4">Contact Information</h3>
+    <p class="text-lg mb-4">Email: aymanilias00@gmail.com</p>
+    <p class="text-lg mb-8">Phone: +8801703645713</p>
+
+    <h3 class="text-2xl font-semibold mb-4">Connect With Me</h3>
+    <div class="flex items-center">
+        <a href="http://www.linkedin.com/in/ayman-ilias-b94082175" target="_blank" class="mr-4">
+            <i class="fab fa-linkedin-in text-4xl"></i>
+        </a>
+        
+        <a href="https://www.facebook.com/ayman.ilias.547" target="_blank" class="mr-4">
+            <i class="fab fa-facebook-f text-4xl"></i>
+        </a>
+        <a href="https://t.me/Ayman_ilias" target="_blank">
+            <i class="fab fa-telegram text-4xl"></i>
+        </a>
+    </div>
+</div>
+
+{% endblock %}

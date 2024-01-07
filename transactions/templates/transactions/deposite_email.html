@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #c08aee;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3 {
+            color: black;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Hello {{ user.first_name }} {{ user.last_name }},</h3>
+
+        <p>Your deposit request for <strong>${{ amount }}</strong>  has been successfully completed. Your total balance now stands at <strong>${{ user.account.balance }}.</strong></p>
+
+    <p>Thank you for choosing Mamar Bank for your banking needs.</p>
+
+    <div class="footer" style="margin-top: 20px; font-size: 14px; color: black">
+        <p>Best regards,</p>
+        <p>Amar Bank Team</p>
+    </div>
+            
+        
+    </div>
+</body>
+</html>
+    
