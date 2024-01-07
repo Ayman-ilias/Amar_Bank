@@ -17,20 +17,23 @@
 
         <!-- Centered Content -->
         <div class="md:w-1/2 md:mx-4" style="background-color: lightcyan;">
-            <h1 class="font-bold text-4xl my-4 text-blue-800 text-center md:text-left">Welcome to Amar Bank - Your Islamic Financial Partner</h1>
+            <div>
+                <h1 class="font-bold text-4xl my-4 text-blue-800 text-center md:text-left">Welcome to Amar Bank - Your Islamic Financial Partner</h1>
             <p class="leading-normal mb-4 text-gray-700 text-center md:text-left">
                 Amar Bank is committed to providing you with a strictly Islamic Sharia-compliant banking experience. Manage your funds with ethical principles – deposit money, withdraw funds, and explore Sharia-compliant financial services. Our user-friendly platform ensures a seamless and ethical banking experience. 
             </p>
-            <img class="w-full rounded-lg shadow-lg" src="{% static 'img/ib.jpg' %}" alt="Right Image"/>
+            {% if not user.is_authenticated %}
+            <div class="flex justify-center md:justify-start w-full">
+                <a href="{% url 'register' %}" class="bg-green-700 text-white rounded-none hover:bg-green-800 py-2 px-4 border border-green-700 hover:border-transparent transition-all duration-300">Get Started</a>
+            </div>
+        {% endif %}
+            </div>
+            <img class="w-full pt-5 rounded-lg shadow-lg" src="{% static 'img/ib.jpg' %}" alt="Right Image"/>
             <div style="background-color:rgb(23, 247, 225); margin-top: 30px; border-radius: 10px;">
                 <h4 style="padding-left: 5px;color: rgb(2, 85, 113);">Islamic Shariah banking adheres to Islamic principles, prohibiting interest (riba) and engaging in ethical financial practices. Transactions must comply with Shariah law, promoting fairness and risk-sharing. Investments are guided by Islamic ethics, ensuring social responsibility. Islamic banking aims to provide financial services aligned with Islamic values and morality.</h4>
 
             </div>
-            {% if not user.is_authenticated %}
-                <div class="flex justify-center md:justify-start w-full">
-                    <a href="{% url 'register' %}" class="bg-green-700 text-white rounded-none hover:bg-green-800 py-2 px-4 border border-green-700 hover:border-transparent transition-all duration-300">Get Started</a>
-                </div>
-            {% endif %}
+           
         </div>
 
         <!-- Right Image -->
